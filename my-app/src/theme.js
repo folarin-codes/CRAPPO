@@ -1,6 +1,15 @@
 
 import { createTheme } from "@mui/material";
 export const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1024,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
       typography: {
             h3: {
               fontSize: 18,
@@ -13,8 +22,13 @@ export const theme = createTheme({
               fontSize: 48,
             },
             p: {
-                  fontSize: 16,
-            },
+              fontSize: 16,
+              fontWeight: 100,
+              color:"#9ca3af"
+    },
+    span: {
+              color:'#cb7280'
+            }
       },
       
       components: {
@@ -31,9 +45,13 @@ export const theme = createTheme({
               subtitle2: 'h2',
               body1: 'span',
               body2: 'span',
-              p: 'p'
+              p: 'p',
+              span:'span'
             },
           },
+          color: {
+            other : 'red'
+          }
         },
       },
     });

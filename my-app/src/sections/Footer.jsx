@@ -1,7 +1,7 @@
 import { Stack, Typography, Box, Link, styled } from '@mui/material';
 import visaImg from '../images/visa.png'
 import masterCardImg from '../images/mastercard.png'
-import btcImg from '../images/btc.png'
+import btcImg from '../images/bitc.png'
 
 import background from '../images/hero-bg.png'
 
@@ -12,16 +12,27 @@ const StyledLink = styled(Link)({
      
 })
 
+const StyledFooter = styled(Stack)(({ theme }) => ({
+      
+      flexDirection: 'row',
+      gap: '3em',
+      justifyContent:'space-between',
+     
+      [theme.breakpoints.down('md')]: {
+            flexDirection: 'column', 
+      }
+}))
+
 
 const Footer = () => {
       return (
-            <Box padding={'4em 3em'} sx={{backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundSize:'cover' }}>
-                  <Stack direction={'row'} gap={3} justifyContent='space-between'>
+            <Box padding={'4em 5vw'} sx={{backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundSize:'cover' }}>
+                  <StyledFooter>
+                        
                         <Stack>
-                              <img />
+                              <img src='https://cypto-currency.vercel.app/static/media/logo.e44a93b92960b7a7a870e08a3080d60e.svg' />
                               
-                              <Typography variant='h3' color='white' component={'h3'} >CRAPPO</Typography>
-                              
+                             
                         </Stack>
 
                         <Stack gap={2}>
@@ -43,17 +54,19 @@ const Footer = () => {
                         </Stack>
 
                         <Stack gap={2}>
-                              <Typography variant='h3' color='white' component={'h3'}>Resources Links</Typography>
-                              <Stack direction={'row'}>
+                              <Typography variant='h3' color='white' component={'h3'}>We accept following payment systems</Typography>
+
+                              <Stack direction={'row'} gap={2}>
                                     <img src={visaImg} />
                                     <img src={masterCardImg} />
                                     <img src={btcImg} />
-                             </Stack>
+                              </Stack>
+                              
                         </Stack>
 
                         
 
-                  </Stack>
+                  </StyledFooter>
 
             </Box>
             

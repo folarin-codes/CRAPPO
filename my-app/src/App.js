@@ -5,7 +5,8 @@ import Footer from "./sections/Footer"
 import { Box } from "@mui/system"
 
 import { ThemeProvider } from "@mui/material"
-import {theme} from './theme'
+import { theme } from './theme'
+import { MobileNav } from "./sections/Navigation"
 
 const App = () => {
   return (
@@ -13,7 +14,9 @@ const App = () => {
 
    
 
-    <Box>
+      <Box>
+        <MobileNav/>
+        
       <Header />
       <CardSection />
       <Features />
