@@ -20,7 +20,7 @@ export const SubscribeButton = styled('button')(({theme}) => ({
       padding: '.5em 1em',
      
       [theme.breakpoints.down('md')]: {
-            width: '50%',
+            
             margin:'0 auto'
       }
 }))

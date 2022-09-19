@@ -42,6 +42,8 @@ const InputContainer = styled(Stack)(({ theme }) => ({
       flex: 1,
       flexDirection: 'row',
       gap: '2em',
+      justifyItems: "center",
+      alignItems:"center",
       [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             gap:'2em'
@@ -126,14 +128,19 @@ learn more
                         </Stack>
 
                         <InputContainer >
-                        <TextField
-                              id="standard-textarea"
+                              
+                        {/* <TextField
+                                    id="standard-textarea"
+                                    sx={{width:"100%" , color:'red', borderColor:"white"}}
                              
                               placeholder="enter message"
                               multiline
                                     variant="standard"
-                                   sx={{width:"100%" , color:'white', borderColor:"white"}}
-                              />
+                                  
+                              /> */}
+
+                              <input type={'text'} style={{
+                                    backgroundColor: "transparent", border:"none",outline:"none",  color:"white", borderBottom:'1px solid white', paddingBottom:'1em',width:"100%" }} placeholder="enter message"  />
 
                               
                         <SubscribeButton> Subscribe</SubscribeButton>

@@ -4,6 +4,11 @@ import masterCardImg from '../images/mastercard.png'
 import btcImg from '../images/bitc.png'
 
 import background from '../images/hero-bg.png'
+import youtubeImg from '../images/youtube.svg'
+import linkedInImg from '../images/linkedin.svg'
+import twitterImg from '../images/twitter.svg'
+import instagramImg from '../images/instagram.svg'
+import whatsappImg from '../images/whatsapp.svg'
 
 const StyledLink = styled(Link)({
       color: '#E0E0E0',
@@ -26,11 +31,12 @@ const StyledFooter = styled(Stack)(({ theme }) => ({
 
 const Footer = () => {
       return (
-            <Box padding={'4em 5vw'} sx={{backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundSize:'cover' }}>
+            <Box padding={'4em 5vw'} sx={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                  
                   <StyledFooter>
                         
                         <Stack>
-                              <img src='https://cypto-currency.vercel.app/static/media/logo.e44a93b92960b7a7a870e08a3080d60e.svg' />
+                              <img src='https://cypto-currency.vercel.app/static/media/logo.e44a93b92960b7a7a870e08a3080d60e.svg' style={{width:'135px', height:"40px"}} />
                               
                              
                         </Stack>
@@ -67,6 +73,20 @@ const Footer = () => {
                         
 
                   </StyledFooter>
+
+                  <Stack direction={'row'} mt={'3em'} justifyContent='space-between' sx={{flexDirection:{xs:'column', sm:"column", md:'row'}, gap:"1em"}} >
+                        
+                        <Typography sx={{color:"white"}}>© 2022 CRAPPO. All rights reserved.</Typography>
+
+                        <Stack direction='row' gap={4}>
+                              <img src={youtubeImg} style={{height:"25px", width:'25px'}} />
+                              <img src={whatsappImg } style={{height:"25px", width:'25px'}} />
+                              <img src={instagramImg } style={{height:"25px", width:'25px'}} />
+                              <img src={twitterImg }  style={{height:"25px", width:'25px'}}/>
+                              <img src={linkedInImg } style={{height:"25px", width:'25px'}}/>
+                        </Stack>
+
+                  </Stack>
 
             </Box>
             

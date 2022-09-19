@@ -1,9 +1,14 @@
+import { useState } from 'react'; 
+
+import { Typography, Stack, Box, styled } from '@mui/material'
+
+import Card from '../component/Card';
+
 import btcImg from '../images/btc.png'
 import ethImg from '../images/eth.png'
 import ltcImg from '../images/ltc.png'
 
-import { Typography, Stack, Box, styled } from '@mui/material'
-import Card from '../component/Card';
+
 
 
 const StyledComponent = styled(Stack)(({ theme }) => ({
@@ -11,7 +16,7 @@ const StyledComponent = styled(Stack)(({ theme }) => ({
       flexDirection: 'row',
       gap: '3em',
       justifyContent: 'center',
-      margin : '0 5em',
+      // margin : '0 5em',
 
       [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
@@ -20,8 +25,37 @@ const StyledComponent = styled(Stack)(({ theme }) => ({
       }
 }))
 
+const styles = {
+      backgroundColor:"#2B076E",
+      color: "white",
+      transition:'all 1s ease'
+      
+}
+
+
 
 const CardSection = () => {
+
+      const [focus1, setFocus1] = useState(true)
+      const [focus2, setFocus2] = useState(false)
+      const [focus3, setFocus3] = useState(false)
+      
+      const onClickHandler1 = () => {
+            setFocus1(true)
+            setFocus2(false)
+            setFocus3(false)
+      }
+      const onClickHandler2 = () => {
+            setFocus1(false)
+            setFocus2(true)
+            setFocus3(false)
+      }
+      const onClickHandler3 = () => {
+            setFocus1(false)
+            setFocus2(false)
+            setFocus3(true)
+      }
+
       return (
 
             <Box bgcolor='#f9fafb' padding={'12em 5vw 4em'} onFocus = {()=>{alert('hello')}}>
@@ -31,9 +65,12 @@ const CardSection = () => {
                   </Typography>
 
                   <StyledComponent>
-                        <Card img={btcImg} coin="Bitcoin" symbol='BTC' text={'Digital currency in which a record of transactions is maintained.'} />
-                        <Card img={ethImg} coin='Ethereum' symbol='ETH'  text={'Blockchain technology to create and run decentralized digital applications.'}/>
-                        <Card img={ltcImg } coin='Litecoin' symbol='Ltc' text={'Cryptocurrency that enables instant payments to anyone in the world.'} />
+                        
+                        <Card img={btcImg} coin="Bitcoin" symbol='BTC' text={'Digital currency in which a record of transactions is maintained.'}  onClick={onClickHandler1} style={ focus1 && styles}  />
+
+                        <Card img={ethImg} coin='Ethereum' symbol='ETH' text={'Blockchain technology to create and run decentralized digital applications.'}  onClick={onClickHandler2} style={ focus2 && styles} />
+                        
+                        <Card img={ltcImg } coin='Litecoin' symbol='Ltc' text={'Cryptocurrency that enables instant payments to anyone in the world.'}  onClick={onClickHandler3} style={ focus3 && styles}/>
 
                   </StyledComponent>
 

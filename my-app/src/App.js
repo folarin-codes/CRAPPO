@@ -12,11 +12,8 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
 
-   
-
       <Box>
-        <MobileNav/>
-        
+        <MobileNav/>        
       <Header />
       <CardSection />
       <Features />

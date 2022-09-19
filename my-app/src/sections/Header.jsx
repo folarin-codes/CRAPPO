@@ -62,7 +62,7 @@ const InnerStack =  styled(Stack)(({ theme }) => ({
 function Header() {
       return (
         
-            <Box sx={{backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundSize:'cover', padding:'2em 5vw 0em ', position:'relative', zIndex:1 }}>
+            <Box sx={{backgroundImage: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundSize:'cover', padding:'1em 5vw 0em ', position:'relative', zIndex:1 }}>
                   <Navigation/>
                   <StyledHeader  >
                         <Box flex={1} alignSelf='center'>
@@ -100,7 +100,7 @@ function Header() {
                         </Box>
 
                         <Box flex={1} alignSelf='center'>
-                              <Typography variant='h2' component='h2' color='white' sx={{fontSize:"48px", fontWeight:'300'}} mb={'.1em'}>
+                              <Typography variant='h2' component='h2' color='white' sx={{ fontWeight:'300'}} mb={'.1em'}>
                                     why you should choose CHAPPO
                               </Typography>
 
@@ -131,10 +131,10 @@ function Header() {
                               placeholder="Enter your hash rate"
                               multiline
                                     variant="standard"
-                                   sx={{width:"35%" , color:'white', borderColor:"white", }}
+                                   sx={{width:{xs:'90%',sm:"90%",md:"35%" }, color:'white', borderColor:"white", }}
                               />
-                                <FormControl variant="standard" sx={{ m: 1, minWidth: 120 ,   }}>
-        <InputLabel id="demo-simple-select-standard-label" placeholder='TH/S' sx={{width:'70%'}}>Rate</InputLabel>
+                                <FormControl variant="standard" sx={{ m: 1, minWidth: 120 ,   }} sx={{width:{xs:'60%', sm:'60%', md:'25%'}, }}>
+        <InputLabel id="demo-simple-select-standard-label" placeholder='TH/S' >Rate</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
                                           id="demo-simple-select-standard"

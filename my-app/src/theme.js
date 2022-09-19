@@ -15,11 +15,12 @@ export const theme = createTheme({
               fontSize: 18,
             },
             h2: {
-              fontSize: 22,
-              fontWeight:600
+              fontSize: 'calc(0.5vw + 2em)',
+              fontWeight:'400'
+             
             },
             h1: {
-              fontSize: 48,
+              fontSize: 'calc(1vw + 2em)',
             },
             p: {
               fontSize: 16,

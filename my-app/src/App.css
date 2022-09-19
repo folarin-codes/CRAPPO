@@ -18,3 +18,34 @@ body{
        color: #0ccac4;
        font-size: 4em;
 }
+
+input{
+ 
+ 
+
+}
+
+input::-moz-placeholder{
+  color: white;
+
+}
+
+input:-ms-input-placeholder{
+  color: white;
+
+}
+
+input::-ms-input-placeholder{
+  color: white;
+
+}
+
+input::-webkit-input-placeholder{
+  color: white;
+
+}
+
+input::placeholder{
+  color: white;
+
+}
