@@ -66,7 +66,7 @@ function Header() {
                   <Navigation/>
                   <StyledHeader  >
                         <Box flex={1} alignSelf='center'>
-                              <Stack gap={3} sx={{backgroundColor:' rgb(75 85 99)', borderRadius:"4em", color:'white' , width:{xs:'90%', sm:'55%'}, fontSize:'12px', alignItems:'center'}} direction="row" padding={'.4em .4em'} mb='2em'>
+                              <Stack gap={3} sx={{backgroundColor:' rgb(75 85 99)', borderRadius:"4em", color:'white' , width:{xs:'90%', sm:'55%', md:'70%'}, fontSize:'12px', alignItems:'center'}} direction="row" padding={'.4em .4em'} mb='2em'>
                                     <Box sx={{backgroundColor:"white", borderRadius:'4em', color:'#9ca3af'}} padding='.3em .7em'>
                                        70% Save
                                     </Box>
@@ -133,7 +133,8 @@ function Header() {
                                     variant="standard"
                                    sx={{width:{xs:'90%',sm:"90%",md:"35%" }, color:'white', borderColor:"white", }}
                               />
-                                <FormControl variant="standard" sx={{ m: 1, minWidth: 120 ,   }} sx={{width:{xs:'60%', sm:'60%', md:'25%'}, }}>
+                              <FormControl variant="standard" sx={{ m: 1, minWidth: 120, width: { xs: '60%', sm: '60%', md: '25%' } }}
+                              >
         <InputLabel id="demo-simple-select-standard-label" placeholder='TH/S' >Rate</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
