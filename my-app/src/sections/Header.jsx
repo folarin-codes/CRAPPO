@@ -1,9 +1,14 @@
-import React from 'react'
+
 import Navigation from './Navigation'
 import { Stack, Box, Typography , styled, TextField, InputLabel,Select, FormControl,MenuItem } from '@mui/material'
 import headerImg from '../images/hero.png'
 import image from '../images/why.png'
+
+import globeImg from '../images/globe.png'
+import userImg from '../images/user.png'
+import barImg from '../images/bar.png'
 import background from '../images/hero-bg.png'
+
 import { StyledButton } from '../component/Button'
 
 const StyledHeader = styled(Stack)(({ theme }) => ({
@@ -20,6 +25,21 @@ const StyledHeader = styled(Stack)(({ theme }) => ({
       }
 }))
 
+const IconContainer = styled(Stack)(({ theme }) => ({
+      
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      gap: '2em',
+     padding:"2em 0 ",
+      [theme.breakpoints.down('md')]: {
+            flexDirection:'column'
+      }
+      
+}))
+
+const StyledBox = styled(Box)({
+      width:'50px', height:'50px', borderRadius:"50%", backgroundColor:'#4B5563', display:"flex"
+})
 
 const StyledComponent = styled(Stack)(({ theme }) => ({
       
@@ -36,7 +56,8 @@ const StyledBanner =  styled(Stack)(({ theme }) => ({
       
       position: 'relative',
       top: '7em',
-       backgroundColor: "white", borderRadius: '15px', padding: '2em 2em', gap: '1em', margin: '0 auto', width: '85%',
+      backgroundColor: "white", borderRadius: '15px', padding: '2em 2em', gap: '1em', margin:"0 auto", width:'90%',
+       
 
       [theme.breakpoints.down('md')]: {
             flexDirection:'column'
@@ -86,11 +107,55 @@ function Header() {
                   </Box>
 
                   <Box flex={1} alignSelf='center'>
-                        <img src={ headerImg} style={{width:'80%'}} />
+                        <img src={ headerImg} style={{width:'80%'}} alt='background ' />
                   </Box>
                   
             
                   </StyledHeader>
+
+                  <IconContainer>
+                        
+                        <Stack direction='row' gap={2}>
+                              <StyledBox>
+                                    
+                                    <img src={barImg} style={{margin:'auto'}} alt='a bar logo' />
+
+                              </StyledBox>
+                              <Box>
+                                    <Typography variant='h3' component={'h3'} sx={{color:'white'}}>$30B</Typography>
+                                    <Typography variant='p' component={'p'}>Digital Currency Exchange</Typography>
+                              </Box>
+
+                        </Stack>
+
+                        <Stack direction='row' gap={2}>
+                              <StyledBox>
+                                    
+                        <img src={globeImg} style={{margin:'auto'}} alt='a globe logo' />
+
+                              </StyledBox>
+                              <Box>
+                                    <Typography variant='h3' component={'h3'} sx={{color:'white'}}>190+</Typography>
+                                    <Typography variant='p' component={'p'}>Countries Around The World</Typography>
+                              </Box>
+
+                              
+                              
+                        </Stack>
+
+                        <Stack direction='row' gap={2}>
+                              <StyledBox>
+                                    
+                        <img src={userImg} style={{margin:'auto'}} alt='a user logo' />
+
+                              </StyledBox>
+                              <Box>
+                                    <Typography variant='h3' component={'h3'} sx={{color:'white'}}>$10M</Typography>
+                                    <Typography variant='p' component={'p'}>Trusted Wallet Investors</Typography>
+                              </Box>
+                        </Stack>
+
+                  </IconContainer>
 
                   <StyledComponent>
                         

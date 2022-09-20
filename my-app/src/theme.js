@@ -15,7 +15,7 @@ export const theme = createTheme({
               fontSize: 18,
             },
             h2: {
-              fontSize: 'calc(0.5vw + 2em)',
+              fontSize: 'calc(2vw + 1em)',
               fontWeight:'400'
              
             },

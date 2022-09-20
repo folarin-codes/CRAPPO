@@ -79,11 +79,11 @@ const Footer = () => {
                         <Typography sx={{color:"white"}}>© 2022 CRAPPO. All rights reserved.</Typography>
 
                         <Stack direction='row' gap={4}>
-                              <img src={youtubeImg} style={{height:"25px", width:'25px'}} />
-                              <img src={whatsappImg } style={{height:"25px", width:'25px'}} />
-                              <img src={instagramImg } style={{height:"25px", width:'25px'}} />
-                              <img src={twitterImg }  style={{height:"25px", width:'25px'}}/>
-                              <img src={linkedInImg } style={{height:"25px", width:'25px'}}/>
+                              <img src={youtubeImg} style={{height:"25px", width:'25px'}} alt='youtube icon' />
+                              <img src={whatsappImg } style={{height:"25px", width:'25px'}} alt='whatsapp icon'/>
+                              <img src={instagramImg } style={{height:"25px", width:'25px'}} alt='instagram icon'/>
+                              <img src={twitterImg }  style={{height:"25px", width:'25px'}} alt='twitter icon'/>
+                              <img src={linkedInImg } style={{height:"25px", width:'25px'}} alt='linkedin icon'/>
                         </Stack>
 
                   </Stack>
