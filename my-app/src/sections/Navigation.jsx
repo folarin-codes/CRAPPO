@@ -47,7 +47,7 @@ function Navigation() {
   }  
 
   return (
-    <Box sx={{display:{xs:'none', sm:'none', md:"block"}}} >
+    <Box sx={{display:{xs:'none', sm:'none', md:"block"}, pt:'.5em'}} >
       
       <Stack direction={'row'} justifyContent="space-between">
       <img src='https://cypto-currency.vercel.app/static/media/logo.e44a93b92960b7a7a870e08a3080d60e.svg' />
