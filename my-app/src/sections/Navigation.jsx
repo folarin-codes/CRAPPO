@@ -93,7 +93,7 @@ export default Navigation
 
 export const MobileNav = () => {
 
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState('')
 
 
   const onClickHandler = () => {
@@ -111,7 +111,7 @@ export const MobileNav = () => {
 
     { showMenu &&  
         
-      <Stack backgroundColor="#252540" sx={{ position: 'fixed', width: '100%', height: "100%", display: { md: 'none', xs: false && 'block', transition:'all 5s ease' }, overflow: 'none', zIndex: 2 }}>
+      <Stack backgroundColor="#252540" sx={{ position: 'fixed', width: '100%', height: "100%", display: { md: 'none', xs: false && 'block', transition:'all 5s ease' }, overflow: 'none', zIndex: 2 }} className={(`${showMenu}` ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeInLeft') }>
         
           <Stack alignContent={'center'} alignItems='center' alignSelf={'center'} gap={4} sx={{overscrollBehavior:'contain' , overflow:"hidden"}}>
             
